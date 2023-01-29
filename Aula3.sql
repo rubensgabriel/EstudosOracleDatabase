@@ -1,0 +1,23 @@
+ALTER TABLE tbl_livro
+ADD CONSTRAINT fk_ID_Autor
+FOREIGN KEY (ID_Autor)
+REFERENCES tbl_autores (ID_autor)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+ALTER TABLE tbl_Livro
+ADD CONSTRAINT fk_id_editora
+FOREIGN KEY (ID_editora)
+REFERENCES tbl_editoras (ID_editora)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+ALTER TABLE tbl_Livro
+ADD CONSTRAINT fk_id_categoria
+FOREIGN KEY (ID_Categoria)
+REFERENCES tbl_categorias (ID_Categoria)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+
+
